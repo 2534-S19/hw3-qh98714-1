@@ -49,9 +49,6 @@ void turnOn_BoosterpackLEDBlue();
 void turnOff_BoosterpackLEDBlue();
 
 // TODO: Define any constants that are local to myGPIO.c using #define
-
-
-#endif /* MYGPIO_H_ */
 #define BUFFER_SIZE 5
 
 // When a button is pressed, it is grounded (logic 0)
@@ -74,3 +71,6 @@ void turnOff_BoosterpackLEDBlue();
 #define BOOSTER_RED BIT6  //P2.6
 #define BOOSTER_GREEN BIT4//P2.4
 #define BOOSTER_BLUE BIT6 //P5.6
+
+#endif /* MYGPIO_H_ */
+
