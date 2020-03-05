@@ -2,7 +2,7 @@
  * myGPIO.h
  *
  *  Created on:
- *      Author:
+ *      Author:HAO QIAN
  *
  */
 
@@ -52,3 +52,25 @@ void turnOff_BoosterpackLEDBlue();
 
 
 #endif /* MYGPIO_H_ */
+#define BUFFER_SIZE 5
+
+// When a button is pressed, it is grounded (logic 0)
+#define PRESSED 0
+
+// The bitmask for left Launchpad Board button, also known as Button1 or Launchpad S1
+#define L1 BIT1    // P1.1
+#define L2 BIT4     //P1.4
+
+#define LEFT_LED BIT0       // P1.0
+#define S1 BIT1       //P5.1
+#define S2 BIT5   //P3.5
+
+// LED2
+#define LED2_RED BIT0   //P2.0
+#define LED2_GREEN BIT1 //P2.1
+#define LED2_BLUE BIT2  //P2.2
+
+//BOOSTER LED
+#define BOOSTER_RED BIT6  //P2.6
+#define BOOSTER_GREEN BIT4//P2.4
+#define BOOSTER_BLUE BIT6 //P5.6
