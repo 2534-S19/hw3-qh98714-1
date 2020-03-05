@@ -13,20 +13,26 @@
 void initTimer(unsigned int timer, unsigned int preScaler, unsigned int count)
 {
     // For the specified timer and pre-scale value, put the timer in 32-bit periodic mode.
-
+    Timer32_initModule(timer, PreScaler, 32BITS, cyclic);
 
     // For the specified timer, pass the count value.
-
+    Timer32_setCount(timer, count);
 
     // For the specified timer, configure the timer to repeat once it elapses.
-
+    Timer32_startTimer(timer, ONESHOT);
 }
 
 // TODO: Write a function that indicates whether Timer0 has expired.
 // You have been given a such a function in the lecture slides.
 bool timer0Expired(void)
 {
-
+    static unsigned int previousSnap = MAX_VALUE;
+    unsigned int currentSnap;
+    bool returnValue0;
+    currentSnap = Timer32_getValue(TIMER32_0_BASE);
+    returnValue = (currentSnap > previousSnap);
+    previousSnap = currentSnap;
+    return returnValue0;
 }
 
 // TODO: Write a function that indicates whether Timer1 has expired.
@@ -34,5 +40,11 @@ bool timer0Expired(void)
 // Since we only have two timers, later in the course we will create software timers that use a common time base.
 bool timer1Expired(void)
 {
-
+    static unsigned int previousSnap = MAX_VALUE;
+    unsigned int currentSnap;
+    bool returnValue1;
+    currentSnap = Timer32_getValue(TIMER32_1_BASE);
+    returnValue = (currentSnap > previousSnap);
+    previousSnap = currentSnap;
+    return returnValue1;
 }

@@ -30,6 +30,10 @@ bool timer1Expired(void);
 #define TIMER1_COUNT        1
 
 // TODO: Define any constants that are local to myTimer.c using #define
-
+#define currentSnap;
+#define previousSnap;
+#define returnValue0;
+#define returnValue1;
+#define MAX_VALUE;
 
 #endif /* MYTIMER_H_ */
